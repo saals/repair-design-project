@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+
+  background: $accent;
+  border: none;
+
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(250, 0, 255, 0.35);
+  backdrop-filter: blur(5px);
+  //cursor: pointer;
+
+  //color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
