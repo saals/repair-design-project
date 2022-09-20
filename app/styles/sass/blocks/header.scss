@@ -1,3 +1,100 @@
 .header {
+  background-color: $bg-dark;
+  //padding: 21px 0;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
 
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  //min-height: 57px;
+
+  flex-wrap: wrap;
+
+  .logo {
+    padding: 21px 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+  }
+}
+
+.header__nav {
+  margin: 0 auto;
+}
+
+.header__phone {
+  margin: 0;
+
+  a[href^="tel"] {
+    display: inline-block;
+    //margin-right: 24px;
+    padding: 21px 0;
+    color: $white;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform $transition;
+
+    &:hover {
+      transform: rotate(-3deg) scaleY(1.3);
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+
+    /*    @include media-breakpoint-up(sm) {
+          margin-right: 45px;
+        }*/
+
+    /*    @include media-breakpoint-up(lg) {
+          margin-right: 22px;
+          color: $accent;
+          text-decoration: underline;
+        }*/
+
+    /*    @include media-breakpoint-up(xl) {
+          margin-right: 45px;
+        }*/
+  }
+
+  .button {
+    width: 161px;
+    padding: 11px;
+    display: none;
+
+    /*    @include media-breakpoint-up(sm) {
+          display: inline-block;
+        }*/
+  }
+
+  @include media-breakpoint-up(sm) {
+    a[href^="tel"] {
+      margin-right: 45px;
+    }
+
+    .button {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    order: 1;
+
+    a[href^="tel"] {
+      margin-right: 22px;
+      color: $accent;
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    a[href^="tel"] {
+      margin-right: 45px;
+    }
+  }
 }
