@@ -1,0 +1,265 @@
+.projects {
+  padding: 36px 0;
+  background-color: $bg-dark;
+  color: $white;
+
+  .section-heading {
+    width: 44%;
+    margin: 0 auto 26px;
+    color: $accent;
+    letter-spacing: -0.07em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 80px 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 107px 0;
+
+    .section-heading {
+      margin-left: 0;
+      font-size: 27px;
+      line-height: 37px;
+      text-align: left;
+    }
+  }
+}
+
+.projects__description {
+  width: 90%;
+  min-height: 88px;
+  margin: 0 auto 36px;
+  text-align: center;
+
+  @include media-breakpoint-up(xl) {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 27px;
+    text-align: left;
+  }
+}
+
+.projects__swiper-img {
+  margin-bottom: 36px;
+}
+
+.projects__swiper-txt {
+  .projects__navigation {
+    display: none;
+  }
+}
+
+.projects__img-slide {
+  height: auto;
+  background: $bg-grey;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.projects__txt-slide {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: flex-end;
+  }
+  @include media-breakpoint-up(xl) {
+    justify-content: flex-start;
+  }
+
+  div {
+    width: 48%;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(xl) {
+      width: 44%;
+      margin-bottom: 23px;
+    }
+
+    dt {
+      margin-bottom: 8px;
+      font-family: "yeseva-one-rdp", serif;
+      font-size: 14px;
+      color: $accent;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+    }
+
+    dd {
+      margin: 0;
+      width: 56%;
+      line-height: 1.36;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 13px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 13px;
+        line-height: 1.61;
+      }
+    }
+  }
+}
+
+.projects__pagination,
+.projects__scrolbar {
+  display: none;
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 36px;
+  height: 36px;
+  background-color: $accent;
+  border-radius: 50%;
+
+  &::after {
+    color: $white;
+    font-size: 11px;
+  }
+}
+
+// swiper intro
+.swiper-pagination-bullet {
+  background-color: $white;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $white;
+  opacity: 1;
+}
+
+.swiper-scrollbar-drag {
+  border-radius: 0;
+  border-bottom: 1px solid $accent;
+  //background: transparent;
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  height: 100%;
+}
+
+//
+@include media-breakpoint-up(lg) {
+  .swiper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projects__swiper {
+    display: grid;
+    grid-column-gap: 4%;
+    grid-template-columns: 388px 1fr;
+    //grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+        ". ps"
+        "ph psi"
+        "pst psi"
+        "pp psi";
+  }
+
+  .projects__heading {
+    grid-area: ph;
+  }
+
+  .projects__swiper-img {
+    grid-area: psi;
+
+    margin-bottom: 0;
+
+    .projects__navigation {
+      display: none;
+    }
+
+  }
+
+  .projects__swiper-txt {
+    grid-area: pst;
+    padding-bottom: 72px; //80
+
+    .projects__navigation {
+      display: block;
+      position: relative;
+
+      width: 50%;
+    }
+  }
+
+  .projects__pagination {
+    grid-area: pp;
+    display: block;
+    //height: 16px;
+
+    width: 34%;
+    left: 35px;
+  }
+
+  .projects__scrolbar {
+    grid-area: ps;
+    display: block;
+    height: 20px;
+    margin-bottom: 47px;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 12px;
+      margin: 0;
+      text-transform: uppercase;
+      position: absolute;
+
+      span {
+        width: 32%;
+        text-align: center;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: transparent;
+    top: 65px;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 36px;
+      height: 1px;
+      background-color: $white;
+      position: absolute;
+    }
+  }
+
+  .swiper-button-prev {
+    justify-content: flex-start;
+  }
+
+  .swiper-button-next {
+    justify-content: flex-end;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: -20px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .projects__swiper {
+    margin: 0 30px;
+    grid-template-columns: 440px 1fr;
+  }
+}
