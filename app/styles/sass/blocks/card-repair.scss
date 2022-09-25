@@ -1,0 +1,104 @@
+.card-repair {
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 78px;
+    object-fit: cover;
+
+    height: 365px;
+    background-color: $bg-grey;
+
+    @include media-breakpoint-up(xl) {
+      height: 421px;
+      margin-bottom: 133px;
+    }
+
+    &:hover + .card-repair__txt {
+      opacity: 0.1;
+    }
+  }
+}
+
+.card-repair__title {
+  font-family: "yeseva-one-rdp", serif;
+  font-size: 15px;
+  line-height: 1.39;
+  color: $textcolor;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+  }
+}
+
+.card-repair__txt {
+  width: 270px;
+  //padding: 21px 30px 36px;
+  padding: 21px 25px 36px;
+  background-color: $white;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+
+  position: absolute;
+  bottom: 20px;
+
+  transition: opacity $transition;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+  ul {
+    padding-left: 15px; //--
+    list-style-type: disc;
+    font-size: 13px;
+    color: $grey;
+
+    @include media-breakpoint-up(xl) {
+      line-height: 27px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 8%;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 84%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 27px;
+    padding-bottom: 44px;
+  }
+}
+
+.card-repair__cost {
+  min-width: 190px;
+  width: max-content;
+  max-width: 84%;
+  padding: 13px;
+  margin-bottom: 0;
+  font-family: "yeseva-one-rdp", serif;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  background-color: $accent;
+
+  position: relative;
+  z-index: 1;
+
+  white-space: nowrap;
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 8%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-width: 228px;
+    margin-left: 8%;
+    padding: 18px 13px;
+    font-size: 18px;
+  }
+}
