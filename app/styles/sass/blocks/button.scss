@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  padding: 16px;
+  padding: 20px;
   width: 100%;
 
   background: $accent;
@@ -12,6 +12,7 @@
   text-decoration: none;
   text-align: center;
   transition: color $transition;
+  line-height: 1;
 
   &:hover {
     color: $dark;
@@ -23,7 +24,7 @@
   }
 
   &--transparent {
-    padding: 15px;
+    padding: 19px;
     background: transparent;
     border: 1px solid #ffffff;
 

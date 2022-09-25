@@ -62,8 +62,44 @@
 
 .section-heading {
   font-family: "yeseva-one-rdp", serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 1.39;
   text-transform: uppercase;
   text-align: center;
+
+  &--decor {
+    min-height: 72px;
+
+    position: relative;
+    $decor-height: 28px;
+
+    &::before {
+    $decor-width: 110px;
+
+      content: "";
+      display: block;
+      width: $decor-width;
+      height: 1px;
+      background-color: $accent;
+
+      position: absolute;
+      left: calc(50% - #{$decor-width} / 2);
+      bottom: calc(#{$decor-height} / 2 - 1px);
+    }
+
+    &::after {
+      $decor-width: 43px;
+
+      content: url("../images/dist/icon-decor-1.svg");
+      display: block;
+      width: $decor-width;
+      height: $decor-height;
+      background-color: $bg-dark;
+
+      position: absolute;
+      left: calc(50% - #{$decor-width} / 2);
+      bottom: 0;
+    }
+  }
 }

@@ -1,7 +1,8 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
 
-import Swiper, { Controller, Pagination, Scrollbar, Navigation } from "swiper";
+import Swiper, {Controller, Pagination, Scrollbar, Navigation} from "swiper";
+
 Swiper.use([Controller, Pagination, Scrollbar, Navigation]);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   swiperTxt.controller.control = swiperImg;
   swiperImg.controller.control = swiperTxt;
+
 })

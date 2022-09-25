@@ -1,5 +1,5 @@
 .projects {
-  padding: 36px 0;
+  padding: 36px 0 12px;
   background-color: $bg-dark;
   color: $white;
 
@@ -15,7 +15,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding: 107px 0;
+    padding: 107px 0 80px;
 
     .section-heading {
       margin-left: 0;

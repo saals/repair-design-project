@@ -1,0 +1,67 @@
+.form {
+  div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:not(:last-of-type) {
+      margin-bottom: 63px;
+    }
+  }
+
+  label {
+    //width: 100%;
+    font-size: 13px;
+    color: $white;
+    opacity: .5;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+    color: $white;
+    background-color: transparent;
+    border: none;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    & + label {
+      margin: 26px 0 32px;
+      padding-left: 25px;
+      font-size: 14px;
+      opacity: 1;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: $accent;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          content: url("../images/dist/check.svg");
+          padding-left: 5px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  input::placeholder {
+    color: $white;
+  }
+
+  .button {
+    padding: 19px;
+    font-size: 13px;
+    transform: translateY(25px);
+  }
+}
