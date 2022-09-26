@@ -130,6 +130,10 @@
 }
 
 .control__form.form {
+  .button {
+    transform: translateY(25px);
+  }
+
   @include media-breakpoint-up(sm) {
     display: flex;
     flex-wrap: wrap;
