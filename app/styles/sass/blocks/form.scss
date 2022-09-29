@@ -14,7 +14,8 @@
     opacity: .5;
   }
 
-  input {
+  input,
+  textarea {
     width: 100%;
     font-size: 14px;
     color: $white;
@@ -55,7 +56,8 @@
     }
   }
 
-  input::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     color: $white;
   }
 

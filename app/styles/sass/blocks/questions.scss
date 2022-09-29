@@ -1,0 +1,67 @@
+.questions {
+  padding: 52px 0 46px;
+  background-color: $dark;
+
+  .section-heading {
+    margin-bottom: 38px;
+    font-size: 20px;
+    color: $white;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 300px;
+    background: $white url("../images/dist/bg-questions.png") bottom left;
+    position: relative;
+
+    .container {
+      width: 883px;
+      background-color: $dark;
+
+      @include media-breakpoint-up(lg) {
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+
+.questions__form {
+
+  textarea {
+    resize: none;
+  }
+
+  input[type="checkbox"] {
+    & + label {
+      display: block;
+      width: max-content;
+      margin: 26px auto 49px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 34px 0 34px;
+    max-width: 520px;
+    margin: 0 auto;
+
+    div {
+      &:nth-of-type(-n + 2) {
+        width: 44.5%;
+        display: inline-block;
+      }
+
+      &:first-of-type {
+        margin-right: 9.5%;
+      }
+    }
+
+    .button {
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
