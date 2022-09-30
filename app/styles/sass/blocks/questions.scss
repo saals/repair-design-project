@@ -36,9 +36,7 @@
 
   input[type="checkbox"] {
     & + label {
-      display: block;
-      width: max-content;
-      margin: 26px auto 49px;
+      margin: 26px 0 49px;
     }
   }
 
@@ -55,6 +53,14 @@
 
       &:first-of-type {
         margin-right: 9.5%;
+      }
+    }
+
+    input[type="checkbox"] {
+      & + label {
+        display: block;
+        width: max-content;
+        margin: 26px auto 49px;
       }
     }
 
