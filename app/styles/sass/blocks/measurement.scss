@@ -1,0 +1,133 @@
+.measurement {
+  display: none;
+  padding: 123px 0;
+  background: $white url("../images/dist/bg-measurement.png") no-repeat;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.measurement__content {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.measurement__list {
+  width: 375px;
+  margin: 0 auto;
+  padding: 13px 0;
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 19px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: min-content;
+}
+
+.measurement__item {
+  padding-left: 29px;
+  position: relative;
+
+  &::before {
+    content: "01";
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-color: $accent;
+    border-radius: 50%;
+    padding-left: 10px;
+    font-family: "yeseva-one-rdp", serif;
+    font-size: 18px;
+    line-height: 42px;
+    color: $white;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:nth-child(2)::before {
+    content: "02";
+  }
+
+  &:nth-child(3)::before {
+    content: "03";
+  }
+
+  &:nth-child(4)::before {
+    content: "04";
+  }
+}
+
+.measurement__item:not(:last-child) {
+  margin-bottom: 118px;
+}
+
+.measurement__measurer {
+  width: 466px;
+
+  @include media-breakpoint-up(xl) {
+    width: 506px;
+  }
+}
+
+.measurement__form {
+  margin-bottom: 49px;
+  padding: 28px 49px;
+  background-color: $bg-dark;
+
+  > p {
+    width: 67%;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $white;
+    text-align: center;
+  }
+
+  .form {
+    div:not(:last-of-type) {
+      margin-bottom: 48px;
+    }
+
+    input[type="checkbox"] + label {
+      margin-top: 16px;
+    }
+
+    .button {
+      $width: 213px;
+      width: $width;
+      margin-left: calc(100% - #{$width});
+    }
+  }
+}
+
+.measurement__piggy {
+  margin: 0;
+  padding-left: 132px;
+
+  font-size: 18px;
+  line-height: 26px;
+  color: $accent;
+  //text-shadow: 0 3px 10px rgba(227, 184, 115, 0.15);
+
+  position: relative;
+
+  &::before {
+    display: block;
+    content: url("../images/dist/icon-piggy.svg");
+    width: 72px;
+    height: 72px;
+    padding: 17px 15px;
+    background-color: $accent;
+    border-radius: 50%;
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

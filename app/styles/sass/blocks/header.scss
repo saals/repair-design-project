@@ -1,7 +1,5 @@
 .header {
   background-color: $bg-dark;
-  //padding: 21px 0;
-  font-size: 11px;
   line-height: 15px;
   text-transform: uppercase;
 }
@@ -9,17 +7,23 @@
 .header__wrap {
   display: flex;
   justify-content: space-between;
-  //align-items: center;
-  //min-height: 57px;
 
   flex-wrap: wrap;
 
   .logo {
     padding: 21px 0;
+
+    margin-right: 26px;
   }
 
   @include media-breakpoint-up(lg) {
     flex-wrap: nowrap;
+    align-items: center;
+    min-height: 83px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 22px;
   }
 }
 
@@ -32,7 +36,6 @@
 
   a[href^="tel"] {
     display: inline-block;
-    //margin-right: 24px;
     padding: 21px 0;
     color: $white;
     text-decoration: none;
@@ -63,9 +66,10 @@
   }
 
   .button {
-    width: 161px;
-    padding: 11px;
     display: none;
+    width: 161px;
+    padding: 13px;
+    font-style: italic;
 
     /*    @include media-breakpoint-up(sm) {
           display: inline-block;

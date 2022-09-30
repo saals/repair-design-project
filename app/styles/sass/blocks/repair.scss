@@ -1,0 +1,63 @@
+.repair {
+  padding: 83px 0 53px;
+  background-color: $white;
+
+  .section-heading {
+    &--decor {
+      &::after {
+        content: url("../images/dist/icon-decor-2.svg");
+        background-color: $white;
+      }
+    }
+
+    margin-bottom: 39px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 83px 0;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 107px 0;
+  }
+}
+
+.repair__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+  }
+}
+
+.repair__item {
+  @include media-breakpoint-up(md) {
+    width: 47%;
+    margin: 0 auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 32%;
+    margin: 0;
+  }
+}
+
+.repair__item:not(:last-child) {
+  margin-bottom: 59px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+}
