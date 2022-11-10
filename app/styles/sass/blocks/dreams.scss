@@ -218,3 +218,16 @@
     }
   }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 36px;
+  height: 36px;
+  background-color: $accent;
+  border-radius: 50%;
+
+  &::after {
+    color: $white;
+    font-size: 11px;
+  }
+}
