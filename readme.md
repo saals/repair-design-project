@@ -3,4 +3,4 @@
 <p>Данный проект выполнен в учебных рамках с целью отработки навыков по практическому применению БЭМ, SCSS, Gulp, npm, git.</p>
 
 <p>Run: <strong>gulp</strong>; <strong>gulp build</strong></p>
-<p>ссылка на <a href="https://saals.github.io/rdp-dist/">GitHub Pages</a></p>
+<p>оба слайдера на Swiper: <a href="https://saals.github.io/rdp-dist/">GitHub Pages-2</a></p>
